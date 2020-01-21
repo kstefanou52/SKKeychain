@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol KeychainQueryConfiguration: NSObjectProtocol {
+public protocol KeychainQueryConfiguration: NSObjectProtocol {
     
     var secClass: Keychain.SecClass { get set }
     
@@ -31,7 +31,7 @@ protocol KeychainQueryConfiguration: NSObjectProtocol {
 
 // MARK: - Default Fuctionality
 
-extension KeychainQueryConfiguration {
+public extension KeychainQueryConfiguration {
     
     func setValueToStore(_ value: AnyObject) {
         var queryDictionary = dictionary()

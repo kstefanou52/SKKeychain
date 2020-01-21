@@ -10,21 +10,21 @@ import Foundation
 
 public final class KeychainQuery: NSObject, KeychainQueryConfiguration {
     
-    var secClass: Keychain.SecClass
+    public var secClass: Keychain.SecClass
     
-    var serverUrl: URL?
+    public var serverUrl: URL?
     
-    var service: String
+    public var service: String
     
-    var accessGroup: String?
+    public var accessGroup: String?
     
-    var protocolType: Keychain.ProtocolType?
+    public var protocolType: Keychain.ProtocolType?
     
-    var authenticationType: Keychain.AuthenticationType
+    public var authenticationType: Keychain.AuthenticationType
     
-    var otherParameters: [String : Any]?
+    public var otherParameters: [String : Any]?
     
-    init(completion: (KeychainQueryConfiguration) -> (Void)) {
+    public init(completion: (KeychainQueryConfiguration) -> (Void)) {
         self.secClass = .keyItem
         self.service = "keychain.generic.service"
         self.authenticationType = .Default
