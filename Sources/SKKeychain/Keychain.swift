@@ -41,7 +41,7 @@ public struct Keychain {
         var queryDictionary = query.dictionary()
         queryDictionary[kSecMatchLimit as String] = kSecMatchLimitOne
         queryDictionary[kSecReturnAttributes as String] = kCFBooleanTrue
-        queryDictionary[kSecReturnData as String] = kCFBooleanTrue
+        queryDictionary[kSecReturnRef as String] = kCFBooleanTrue
         
         var queryResult: AnyObject?
         let status = withUnsafeMutablePointer(to: &queryResult) {

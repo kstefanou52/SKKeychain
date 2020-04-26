@@ -37,7 +37,7 @@ public extension KeychainQueryConfiguration {
     
     func setValueToStore(_ value: AnyObject) {
         var queryDictionary = dictionary()
-        queryDictionary[kSecValueData as String] = value
+        queryDictionary[kSecValueRef as String] = value
     }
     
     func dictionary() -> [String: Any] {
