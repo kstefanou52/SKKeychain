@@ -25,6 +25,10 @@ public extension Keychain {
     enum ServerPort {
         static let key: String = String(kSecAttrPort)
     }
+
+    enum Tag {
+        static let key: String = String(kSecAttrApplicationTag)
+    }
     
     enum SecClass {
         

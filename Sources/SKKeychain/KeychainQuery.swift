@@ -9,6 +9,8 @@
 import Foundation
 
 public final class KeychainQuery: NSObject, KeychainQueryConfiguration {
+
+    public var tag: String?
     
     public var secClass: Keychain.SecClass
     

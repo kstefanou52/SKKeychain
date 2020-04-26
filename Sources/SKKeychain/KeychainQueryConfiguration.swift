@@ -9,7 +9,9 @@
 import Foundation
 
 public protocol KeychainQueryConfiguration: NSObjectProtocol {
-    
+
+    var tag: String? { get set }
+
     var secClass: Keychain.SecClass { get set }
     
     var serverUrl: URL? { get set }
@@ -40,7 +42,8 @@ public extension KeychainQueryConfiguration {
     
     func dictionary() -> [String: Any] {
         var query: [String: Any] = [:]
-    
+
+        query[Keychain.Tag.key] = tag
         query[Keychain.SecClass.key] = secClass.value
         if let accessGroup = accessGroup { query[Keychain.AccessGroup.key] = accessGroup }
         
